@@ -1,6 +1,7 @@
 * {
-  -ms-word-wrap: break-word;
-  word-wrap: break-word;
+  -ms-word-wrap: break-word !important;
+  word-wrap: break-word !important;
+  word-break: break-word !important;
   transition: $global-transition;
 }
 

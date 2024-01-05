@@ -11,10 +11,12 @@
     "build:sass-build": "sass --style compressed ./styles/scss/styles.scss ./styles/css/styles.css"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.0.4",
     "inuitcss": "^6.0.0",
     "next": "14.0.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",

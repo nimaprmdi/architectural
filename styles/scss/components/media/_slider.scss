@@ -1,0 +1,30 @@
+/*------------------------------------*\
+  # Slider 
+\*------------------------------------*/
+.c-slider__next {
+  &::before {
+    content: " ";
+    width: rem(100px);
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+  }
+}
+
+.c-slider__next--prev {
+  &::before {
+    content: " ";
+    width: rem(100px);
+    height: 3px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(70%, -50%);
+  }
+}
