@@ -1,0 +1,34 @@
+/*------------------------------------*\
+  #Button ( Primary )
+\*------------------------------------*/
+button,
+.wp-block-button__link,
+.c-btn,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 1px solid $color_border; // 333333
+  background-color: transparent; //transparent
+  color: $architectural_primary_text_color; // 060606
+  border-radius: 0px;
+  cursor: pointer;
+  transition: $global-transition;
+  font-family: $architectural_secondary_font;
+  font-weight: 500;
+  padding: rem(8px 24px);
+  text-decoration: none;
+  line-height: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $architectural_primary_accent_color; // FF00B8
+    text-decoration: none;
+    border: 1px solid $architectural_primary_accent_color;
+  }
+
+  &:visited,
+  &:focus {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,77 @@
+* {
+  // Outline Developer option
+  // outline: red solid 1px !important;
+}
+
+p {
+  color: $architectural_primary_text_color;
+  margin-bottom: rem(32px);
+}
+
+path {
+  transition: none;
+}
+
+svg {
+  transition: none;
+}
+
+blockquote {
+  border-left: rem(3px) solid $color_border_secondary;
+  margin: 0;
+  margin-bottom: rem(16px);
+  padding: rem(8px 0px 8px 16px);
+  color: $architectural_secondary_text_color;
+  font-style: italic;
+
+  P {
+    margin: 0;
+  }
+
+  * {
+    color: inherit;
+  }
+}
+
+address {
+}
+
+pre {
+  background-color: $architectural_neutral_gray_color;
+  padding: 8px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+th {
+  color: $architectural_primary_text_color;
+}
+
+td,
+dt,
+dd {
+  color: $architectural_secondary_text_color;
+}
+
+hr {
+  outline: none;
+  border: 0.5px solid $architectural_border_color;
+  background: $architectural_border_color;
+}
+
+li {
+  color: $architectural_primary_text_color;
+}
+
+legend {
+  color: $architectural_primary_text_color;
+}
+
+hr {
+  border: none !important;
+  border-top: 2px solid $architectural_tertiary_text_color !important;
+  background: none;
+  outline: none;
+
+  margin: rem(48px 0px);
+}

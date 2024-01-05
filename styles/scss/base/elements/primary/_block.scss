@@ -1,0 +1,94 @@
+/*------------------------------------*\
+  #Quote block
+\*------------------------------------*/
+// .wp-block-quote {
+//   border-left: rem(3px) solid $color_border_secondary;
+//   margin: 0;
+//   margin-bottom: rem(16px);
+//   padding: rem(8px 0px 8px 16px);
+//   color: $architectural_secondary_text_color;
+//   font-style: italic;
+
+//   P {
+//     margin: 0;
+//   }
+
+//   * {
+//     color: inherit;
+//   }
+// }
+
+// .wp-block-quote.has-text-align-right {
+//   border-left: none;
+//   border-right: 3px solid $color_border_secondary;
+//   padding-right: rem(16px);
+//   padding-left: 0px;
+// }
+// /*------------------------------------*\
+//   #Quote group
+// \*------------------------------------*/
+// .wp-block-group__inner-container {
+//   padding: rem(16px);
+// }
+
+// /*------------------------------------*\
+//   #Quote Embed
+// \*------------------------------------*/
+// .wp-block-embed {
+//   max-width: 90%;
+//   width: 100%;
+
+//   iframe {
+//     width: 100%;
+//     max-width: 100%;
+//   }
+// }
+
+// /*------------------------------------*\
+//   #Gallery Block
+// \*------------------------------------*/
+// .is-style-masonry-grid,
+// .is-style-masonry-grid > .blocks-gallery-grid {
+//   max-width: 100% !important;
+//   margin-top: rem(48px);
+//   margin-bottom: rem(48px);
+
+//   @include mq($from: tablet) {
+//     margin-bottom: rem(96px);
+//   }
+
+//   .wp-block-image,
+//   .blocks-gallery-item {
+//     margin: 0px !important;
+//     margin-bottom: rem(38px) !important;
+//     width: 100% !important;
+//     max-width: 100%;
+
+//     @include mq($from: tablet) {
+//       margin-bottom: rem(50px) !important;
+//       width: 380px !important;
+//       margin-right: 0 !important;
+//     }
+//   }
+// }
+
+// .is-style-carousel-layout {
+//   max-width: 100% !important;
+//   margin-bottom: rem(87px);
+
+//   @include mq($from: tablet) {
+//     margin-bottom: rem(122px);
+//   }
+// }
+
+// .wp-block-columns {
+//   .wp-block-column {
+//     @include mq($until: tablet) {
+//       margin-bottom: rem(70px);
+//     }
+//   }
+// }
+
+// .wp-block-latest-comments {
+//   margin-left: auto !important;
+// }

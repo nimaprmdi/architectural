@@ -1,0 +1,62 @@
+/*------------------------------------*\
+  #Footer
+\*------------------------------------*/
+
+.c-footer {
+  flex-shrink: 0;
+}
+
+.c-footer__item {
+  position: relative;
+
+  &:first-child {
+    &::before {
+      content: " ";
+      display: block;
+      width: 100%;
+      height: 70%;
+      top: 50%;
+      right: 0;
+      transform: translate(0%, -50%);
+      position: absolute;
+
+      @include mq($from: md) {
+        border-right: 1px solid white;
+      }
+    }
+  }
+
+  @include mq($from: "2xl") {
+    width: calc(25% - rem(16px)) !important;
+  }
+}
+
+// .c-footer {
+//   min-height: 105px;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   width: 100%;
+//   margin-top: auto;
+//   margin-bottom: rem(49px);
+//   position: relative;
+
+//   @include mq($from: tablet) {
+//     margin-top: auto;
+//     margin-bottom: rem(71px);
+//   }
+// }
+
+// .c-footer__container {
+//   width: 100%;
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   margin-top: rem(86px);
+//   padding: rem(0px 16px);
+
+//   @include mq($from: tablet) {
+//     margin-top: rem(187px);
+//     padding: 0px;
+//   }
+// }

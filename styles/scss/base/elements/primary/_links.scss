@@ -1,0 +1,36 @@
+/*------------------------------------*\
+  #Links
+\*------------------------------------*/
+a,
+.a {
+  color: $architectural_primary_color; //767676
+  transition: $global-transition;
+  -webkit-text-decoration-color: $architectural_primary_accent_color; /* safari still uses vendor prefix */
+  text-decoration-color: $architectural_primary_accent_color;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color_link_hover;
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 1px solid $architectural_main_primary_color;
+    border-radius: 1px;
+  }
+
+  &:hover,
+  &:active {
+    outline: none;
+  }
+}
+
+a img,
+.a img {
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.5;
+  }
+}

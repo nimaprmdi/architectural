@@ -1,0 +1,13 @@
+* {
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+  transition: $global-transition;
+}
+
+body {
+  transition: $global-transition;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
