@@ -28,3 +28,32 @@
     display: block;
   }
 }
+
+.u-has-before-separator {
+  padding-left: 11%;
+  position: relative;
+
+  &::before {
+    content: " ";
+    display: block;
+    width: 10%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    background-color: #000;
+  }
+}
+
+.u-pl-5-percent {
+  padding-left: 5%;
+}
+
+.u-max-w-1360 {
+  max-width: rem(1360px);
+}
+
+.u-h-75vh {
+  height: 75vh;
+}
