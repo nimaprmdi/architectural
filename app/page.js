@@ -1,9 +1,11 @@
 import Hero from "@/components/Hero";
+import Intro from "@/components/Intro";
 
 export default function Home() {
   return (
-    <section className="w-100 h-screen bg-slate-900 flex justify-end relative">
+    <section className="w-100">
       <Hero className="w-3/4" />
+      <Intro />
     </section>
   );
 }

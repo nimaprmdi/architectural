@@ -16,7 +16,7 @@ const Hero = ({ className }) => {
   const [secondSwiper, setSecondSwiper] = useState(null);
 
   return (
-    <>
+    <div className="h-screen bg-slate-900 flex justify-end relative">
       <div className={className}>
         <Swiper
           modules={[Pagination, Scrollbar, Controller]}
@@ -122,7 +122,7 @@ const Hero = ({ className }) => {
           <SwiperChild />
         </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
