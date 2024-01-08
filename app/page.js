@@ -1,5 +1,4 @@
 import Advertise from "@/components/Advertise";
-import Clients from "@/components/Clients";
 import Hero from "@/components/Hero";
 import Intro from "@/components/Intro";
 import LastestProjects from "@/components/LastestProjects";
