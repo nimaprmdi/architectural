@@ -46,6 +46,44 @@
   }
 }
 
+.u-has-before-separator--md {
+  padding-left: 26%;
+  &::before {
+    width: 25%;
+  }
+}
+
+.u-has-before-separator--right-md {
+  padding-left: 0;
+  padding-right: 51%;
+
+  &::before {
+    width: 45%;
+  }
+}
+
+.u-has-before-separator--white {
+  &::before {
+    background-color: #fff;
+  }
+}
+
+.u-has-before-separator--right {
+  padding-left: 0;
+  padding-right: 30%;
+  position: relative;
+  right: 0;
+  @include mq($from: lg) {
+    right: 100%;
+    padding-right: 100%;
+  }
+
+  &::before {
+    left: unset;
+    right: 0;
+  }
+}
+
 .u-pl-5-percent {
   padding-left: 5%;
 }
@@ -56,4 +94,8 @@
 
 .u-h-75vh {
   height: 75vh;
+}
+
+.u-py-25 {
+  padding: 6% 0;
 }

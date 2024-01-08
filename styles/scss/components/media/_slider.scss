@@ -28,3 +28,9 @@
     transform: translate(70%, -50%);
   }
 }
+
+.c-slider__next--black {
+  &::before {
+    background-color: #000;
+  }
+}

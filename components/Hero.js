@@ -93,7 +93,7 @@ const Hero = ({ className }) => {
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
           allowTouchMove={false}
-          className="main-swiper w-100 h-full "
+          className="main-swiper w-100 h-full relative"
         >
           <SwiperSlide className="w-100 h-52  text-white">
             <div className="w-100 h-full flex justify-start items-center">
