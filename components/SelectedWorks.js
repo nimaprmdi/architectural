@@ -72,8 +72,8 @@ const SelectedWorks = () => {
                   />
                 </div>
 
-                <div className="slider__btn absolute" style={{ bottom: "12%", right: "40%" }}>
-                  <a className="c-btn btn--big">View Case</a>
+                <div className="slider__btn absolute" style={{ bottom: "12%", right: "30%" }}>
+                  <a className="c-btn btn--big btn--secondary">View Case</a>
                 </div>
               </div>
 
@@ -124,8 +124,8 @@ const SelectedWorks = () => {
                   />
                 </div>
 
-                <div className="slider__btn absolute" style={{ bottom: "12%", right: "40%" }}>
-                  <a className="c-btn btn--big">View Case</a>
+                <div className="slider__btn absolute" style={{ bottom: "12%", right: "30%" }}>
+                  <a className="c-btn btn--big btn--secondary">View Case</a>
                 </div>
               </div>
 

@@ -8,7 +8,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
   border: 1px solid $color_border; // 333333
-  background-color: transparent; //transparent
+
   color: $architectural_primary_text_color; // 060606
   border-radius: 0px;
   cursor: pointer;
@@ -19,17 +19,31 @@ input[type="submit"] {
   text-decoration: none;
   line-height: inherit;
 
+  @apply bg-white underline decoration-1 border-2;
+
   &:hover,
   &:focus,
   &:active {
-    background-color: $architectural_primary_accent_color; // FF00B8
-    text-decoration: none;
-    border: 1px solid $architectural_primary_accent_color;
+    // background-color: $architectural_primary_accent_color; // FF00B8
+    // text-decoration: none;
+    // border: 1px solid $architectural_primary_accent_color;
+
+    @apply bg-transparent border-gray-50 border-2 underline text-white decoration-1;
   }
 
   &:visited,
   &:focus {
     text-decoration: none;
+  }
+}
+
+.btn--secondary {
+  @apply bg-transparent border-black border;
+
+  &:hover,
+  &:focus,
+  &:active {
+    @apply bg-black text-white border-black border;
   }
 }
 

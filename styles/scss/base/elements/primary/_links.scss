@@ -11,8 +11,9 @@ a,
   &:hover,
   &:focus,
   &:active {
-    color: $color_link_hover;
     text-decoration: none;
+
+    @apply text-white;
   }
 
   &:focus {

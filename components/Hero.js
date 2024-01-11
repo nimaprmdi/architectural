@@ -88,7 +88,7 @@ const Hero = ({ className }) => {
           spaceBetween={0}
           slidesPerView={1}
           pagination={{ clickable: true, enabled: false }}
-          scrollbar={{ draggable: false }}
+          scrollbar={{ el: null }}
           onSwiper={setSecondSwiper}
           controller={{ control: firstSwiper }}
           allowTouchMove={false}
