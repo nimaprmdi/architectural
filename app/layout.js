@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import "@/styles/css/styles.css";
 
 import { Montserrat } from "next/font/google";
-const montserrat = Montserrat({ subsets: ["latin"] }); // Specify subsets if needed
+const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat", display: "swap" }); // Specify subsets if needed
 
 export const metadata = {
   title: "Create Next App",

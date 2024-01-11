@@ -4,7 +4,7 @@ import React from "react";
 const LastestProjects = () => {
   return (
     <section className="c-lastest-projects w-full pt-28 pb-12 relative">
-      <div className="w-full h-5/6 lg:h-96 bg-slate-900 absolute top-0 -z-10"></div>
+      <div className="w-full h-5/6 lg:h-96 bg-primary absolute top-0 -z-10"></div>
 
       <h4 className="u-has-before-separator u-has-before-separator--md u-has-before-separator--white text-5xl md:text-6xl text-white">
         Latest Projects

@@ -9,7 +9,7 @@ const Footer = () => {
   // Get from hygraph
 
   return (
-    <footer className={`c-footer w-100 bg-slate-900 flex-wrap gap-4 ${centerClass} `}>
+    <footer className={`c-footer w-100 bg-primary flex-wrap gap-4 ${centerClass} `}>
       <div className={`${itemsClass} ${centerClass}`}>
         <span className="c-header__border ml-2 mr-4 md:mr-10"></span>
         <h4 className="h3 text-white">Architectural</h4>

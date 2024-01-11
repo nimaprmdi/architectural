@@ -3,7 +3,7 @@ import React from "react";
 
 const Cta = () => {
   return (
-    <div className="w-full bg-green-950 flex justify-between items-center">
+    <div className="w-full bg-accent flex justify-between items-center">
       <div style={{ width: "50%", height: "90vh", position: "relative" }}>
         <Image className="object-cover" src="/images/building_1.jpg" layout="fill" />
       </div>
