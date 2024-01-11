@@ -13,7 +13,6 @@ import Image from "next/image";
 import SwiperNavs from "./SwiperNavs";
 
 const SelectedWorks = () => {
-  const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
 
   return (
@@ -33,13 +32,13 @@ const SelectedWorks = () => {
           spaceBetween={0}
           slidesPerView={1}
           pagination={{ clickable: true, enabled: false }}
-          scrollbar={{ draggable: false }}
-          onSwiper={setFirstSwiper}
+          scrollbar={{ el: null }}
+          // controller={{ control: controlledSwiper }}
           controller={{ control: secondSwiper }}
-          className="swiper w-100 h-full"
+          className="swiper w-100 h-full "
         >
-          <SwiperSlide className="w-full h-52 text-white relative">
-            <div className="w-full h-full flex ">
+          <SwiperSlide className="w-full h-52  text-white relative">
+            <div className="w-full h-full bg-haji-400 flex ">
               <div className="slider__images w-4/6 h-full flex justify-center  relative items-center">
                 <div className="slider__counter absolute" style={{ top: "15%", left: "20%" }}>
                   <span className="text-9xl" style={{ color: "#a9ceee" }}>
