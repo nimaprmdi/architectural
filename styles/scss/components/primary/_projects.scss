@@ -1,0 +1,21 @@
+.c-projects__item {
+  &:hover,
+  &:focus,
+  &:active {
+    .c-projects__title {
+      opacity: 1;
+    }
+
+    .c-projects__image {
+      opacity: 0.2;
+    }
+  }
+}
+
+.c-projects__title {
+  opacity: 0;
+
+  @include mq($from: md) {
+    max-width: 90%;
+  }
+}

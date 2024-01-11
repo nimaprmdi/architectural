@@ -34,13 +34,12 @@ const SelectedWorks = () => {
           slidesPerView={1}
           pagination={{ clickable: true, enabled: false }}
           scrollbar={{ draggable: false }}
-          // controller={{ control: controlledSwiper }}
           onSwiper={setFirstSwiper}
           controller={{ control: secondSwiper }}
-          className="swiper w-100 h-full bg-slate-900"
+          className="swiper w-100 h-full"
         >
-          <SwiperSlide className="w-full h-52 bg-slate-900 text-white relative">
-            <div className="w-full h-full bg-gray-400 flex ">
+          <SwiperSlide className="w-full h-52 text-white relative">
+            <div className="w-full h-full flex ">
               <div className="slider__images w-4/6 h-full flex justify-center  relative items-center">
                 <div className="slider__counter absolute" style={{ top: "15%", left: "20%" }}>
                   <span className="text-9xl" style={{ color: "#a9ceee" }}>
@@ -91,8 +90,8 @@ const SelectedWorks = () => {
             </div>
           </SwiperSlide>
 
-          <SwiperSlide className="w-full h-52 bg-slate-900 text-white relative">
-            <div className="w-full h-full bg-gray-400 flex ">
+          <SwiperSlide className="w-full h-52 text-white relative">
+            <div className="w-full h-full flex ">
               <div className="slider__images w-4/6 h-full flex justify-center  relative items-center">
                 <div className="slider__counter absolute" style={{ top: "15%", left: "20%" }}>
                   <span className="text-9xl" style={{ color: "#a9ceee" }}>

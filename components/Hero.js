@@ -17,7 +17,7 @@ const Hero = ({ className }) => {
 
   return (
     <div className="h-screen bg-slate-900 flex justify-end relative">
-      <div className={className}>
+      <div className={className || "w-3/4"}>
         <Swiper
           modules={[Pagination, Scrollbar, Controller]}
           spaceBetween={0}

@@ -19,11 +19,11 @@ const Header = () => {
         <span className="c-header__border ml-2 mr-4 md:mr-10"></span>
 
         {/* <Image
-          src="/images/image.png"
-          alt="My image"
-          width={500}
-          height={500}
-        /> */}
+            src="/images/image.png"
+            alt="My image"
+            width={500}
+            height={500}
+          /> */}
 
         <h1 className="c-header__logo text-white text-base md:text-2xl">Architectural</h1>
       </div>

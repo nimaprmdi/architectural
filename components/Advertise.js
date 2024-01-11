@@ -4,7 +4,7 @@ import { Icon } from "@iconify/react";
 
 const Advertise = () => {
   return (
-    <section className="c-advertise w-full mt-5 flex items-center justify-center relative py-20 pb-32">
+    <section className="c-advertise w-full flex items-center justify-center relative pb-32 my-32">
       <div className="c-advertise__blue-box w-full lg:w-9/12 max-w-6xl bg-slate-900 relative pt-12 pb-32 px-6">
         <div className="c-advertise__title">
           <h4 className="u-has-before-separator u-has-before-separator--md u-has-before-separator--white  text-6xl text-white">

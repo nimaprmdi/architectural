@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-const Intro = () => {
+const Cta = () => {
   return (
     <div className="w-full bg-green-950 flex justify-between items-center">
       <div style={{ width: "50%", height: "90vh", position: "relative" }}>
@@ -24,4 +24,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default Cta;
