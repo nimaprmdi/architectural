@@ -9,7 +9,6 @@ const SwiperNavs = () => {
       <span
         className="c-slider__next relative text-black c-slider__next--black pl-32 pointer-events-auto select-auto bottom-1/3 cursor-pointer"
         onClick={() => {
-          console.log(swiper);
           swiper.slideNext();
         }}
       >
@@ -19,7 +18,6 @@ const SwiperNavs = () => {
       <span
         className="c-slider__next mt-4 left-0 relative c-slider__next--prev pr-16 text-black c-slider__next--black pointer-events-auto select-auto u-left-10 bottom-1/4 cursor-pointer"
         onClick={() => {
-          console.log(swiper);
           swiper.slidePrev();
         }}
       >
