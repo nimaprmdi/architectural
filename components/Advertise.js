@@ -26,7 +26,7 @@ const Advertise = ({ data }) => {
   // titles: (3)[("Eco-Friendly", "Reliable", "24*7 Support")];
 
   return (
-    <section className="c-advertise w-full flex items-center justify-center relative pb-32 my-32">
+    <section className="c-advertise w-full flex items-center justify-center relative pb-32 mb-32 mt-64">
       {data && data.length > 0 ? (
         <div className="c-advertise__blue-box w-full lg:w-9/12 max-w-6xl bg-primary relative pt-12 pb-32 px-6">
           <div className="c-advertise__title">

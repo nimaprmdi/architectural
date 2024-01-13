@@ -1,11 +1,11 @@
 import React from "react";
 import { useSwiper } from "swiper/react";
 
-const SwiperNavs = () => {
+const SwiperNavs = ({ className = "" }) => {
   const swiper = useSwiper();
 
   return (
-    <div style={{ bottom: "15%", right: "10%" }} className="absolute  right-1/4 flex flex-wrap w-52  ">
+    <div style={{ bottom: "15%", right: "10%" }} className={`absolute  right-1/4  w-52 ${className}`}>
       <span
         className="c-slider__next relative text-black c-slider__next--black pl-32 pointer-events-auto select-auto bottom-1/3 cursor-pointer"
         onClick={() => {

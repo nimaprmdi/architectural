@@ -40,8 +40,8 @@ const SelectedWorks = ({ data }) => {
           >
             {data.map((selectedWork, index) => (
               <SwiperSlide key={`selectedworks_slider_${index}`} className="w-full h-52  text-white relative">
-                <div className="w-full h-full bg-haji-400 flex ">
-                  <div className="slider__images w-4/6 h-full flex justify-center  relative items-center">
+                <div className="w-full h-full flex flex-wrap">
+                  <div className="slider__images mt-16 w-full lg:w-4/6 h-full flex justify-center relative items-center">
                     <div className="slider__counter absolute" style={{ top: "15%", left: "20%" }}>
                       <span className="text-9xl" style={{ color: "#a9ceee" }}>
                         {index <= 9 ? `0${++index}` : ++index}
@@ -49,7 +49,7 @@ const SelectedWorks = ({ data }) => {
                     </div>
 
                     {selectedWork.projectsGallery[0] ? (
-                      <div className="image absolute right-0 top-0" style={{ width: "65%", height: "450px" }}>
+                      <div className="c-selected-work__main-image image lg:absolute right-0 top-0">
                         <Image
                           className="cursor-grab"
                           src={selectedWork.projectsGallery[0].url || "/images/main.png"}
@@ -64,7 +64,10 @@ const SelectedWorks = ({ data }) => {
                     ) : null}
 
                     {selectedWork.projectsGallery[1] ? (
-                      <div className="image absolute left-0 bottom-0" style={{ width: "45%", height: "400px" }}>
+                      <div
+                        className="c-selected-work__secondary-image image absolute left-0 bottom-0"
+                        style={{ width: "45%", height: "400px" }}
+                      >
                         <Image
                           className="cursor-grab"
                           src={selectedWork.projectsGallery[1].url || "/images/main.png"}
@@ -78,16 +81,16 @@ const SelectedWorks = ({ data }) => {
                       </div>
                     ) : null}
 
-                    <div className="slider__btn absolute" style={{ bottom: "12%", right: "30%" }}>
-                      <a className="c-btn btn--big btn--secondary">View Case</a>
+                    <div className="c-selected-work__button slider__btn absolute">
+                      <a className="c-btn btn--big lg:btn--secondary">View Case</a>
                     </div>
                   </div>
 
-                  <div className="slider__context w-2/6 h-full  flex items-center flex-wrap content-center pl-8 relative">
-                    <h4 className="text-black text-5xl">{selectedWork.projectTitle}</h4>
-                    <p className="text-black mt-4 w-full">{selectedWork.description}</p>
+                  <div className="slider__context absolute lg:relative top-0 w-full lg:w-2/6 h-full flex items-center flex-wrap  content-center pl-8 ">
+                    <h4 className="text-black text-5xl bg-white">{selectedWork.projectTitle}</h4>
+                    <p className="text-black mt-4 bg-white w-4/5 lg:w-full">{selectedWork.description}</p>
 
-                    <SwiperNavs />
+                    <SwiperNavs className="hidden lg:flex flex-wrap" />
                   </div>
                 </div>
               </SwiperSlide>
