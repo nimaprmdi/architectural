@@ -9,7 +9,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 
 export default async function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="winter">
       <body className={montserrat.className}>
         <Header />
         <div className="page">{children}</div>

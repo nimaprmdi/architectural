@@ -12,16 +12,36 @@ export default async function Home() {
     slug: "home-page",
   });
 
-  // console.log(data);
+  const res = await fetch("https://jsonplaceholder.typicode.com/users");
+  const users = await res.json();
 
   return (
-    <section className="w-100">
-      <Hero data={data.home.projects} className="w-3/4" />
-      <Cta data={data.home.abouts} />
-      <SelectedWorks data={data.home.projects} />
-      <Advertise data={data.home.abouts} />
-      <LastestProjects data={data.home.projects} />
-      {/* <Clients /> */}
-    </section>
+    <>
+      <table className="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.email}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </>
+
+    // <section className="w-100">
+    //   <Hero data={data.home.projects} className="w-3/4" />
+    //   <Cta data={data.home.abouts} />
+    //   <SelectedWorks data={data.home.projects} />
+    //   <Advertise data={data.home.abouts} />
+    //   <LastestProjects data={data.home.projects} />
+    //   {/* <Clients /> */}
+    // </section>
   );
 }
