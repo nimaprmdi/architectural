@@ -32,8 +32,10 @@ const Hero = ({ data, className }) => {
             {data.map((project, index) => (
               <SwiperSlide key={`project_slider_image_${index}`} className="w-100 h-52 bg-primary text-white">
                 <div className="w-100 h-full flex justify-center items-center">
+                  {/* <div className="w-full h-full bg-red-400 "></div> */}
+
                   <Image
-                    className="cursor-grab"
+                    className="cursor-grab u-animated-background"
                     src={project.projectsGallery[0].url || "/images/main.png"}
                     alt={project.projectTitle || "Image title"}
                     layout="fill"

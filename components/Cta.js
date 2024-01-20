@@ -10,7 +10,8 @@ const Cta = ({ data }) => {
             <React.Fragment key={`about_component_key_${index}`}>
               <div style={{ width: "50%", height: "90vh", position: "relative" }}>
                 <Image
-                  className="object-cover"
+                  alt="my alt"
+                  className="object-cover u-animated-background"
                   src={about.descriptionThumbnail.url || "/images/building_1.jpg"}
                   layout="fill"
                 />

@@ -22,8 +22,10 @@ const LastestProjects = ({ data }) => {
               }`}
             >
               <div className="absolute top-3 left-3 flex gap-2 w-11/12 z-40">
-                {project.category.map((cat) => (
-                  <div className="bg-gray-200 px-6 py-1 mr-2 text-black">{cat}</div>
+                {project.category.map((cat, index) => (
+                  <div key={`haji_jan_${index}`} className="bg-gray-200 px-6 py-1 mr-2 text-black">
+                    {cat}
+                  </div>
                 ))}
               </div>
 
@@ -33,10 +35,11 @@ const LastestProjects = ({ data }) => {
                 layout="fill"
                 objectFit="cover"
                 loading="lazy"
+                className="u-animated-background"
               />
 
               <div
-                className="w-11/12 absolute bottom-0 bg-blue-950 py-5 px-3"
+                className="w-11/12 haji absolute bottom-0 bg-blue-950 py-5 px-3 z-50"
                 style={{ left: "50%", transform: "translate(-50% , 50%)" }}
               >
                 <p className="m-0 text-white text-xl text-center">{project.description}</p>

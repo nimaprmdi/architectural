@@ -4,46 +4,57 @@
 
 /* Fade In */
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 @-webkit-keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Fade Out */
 @keyframes fadeOut {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    99% {
-        opacity: 1;
-    }
-    100% {
-        display: none;
-    }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+  }
 }
 @-webkit-keyframes fadeOut {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    99% {
-        opacity: 1;
-    }
-    100% {
-        display: none;
-    }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    display: none;
+  }
+}
+
+// Skeleton loading
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 490px 0;
+  }
+  100% {
+    background-position: -490px 0;
+  }
 }

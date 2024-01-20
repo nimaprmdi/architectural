@@ -10,7 +10,7 @@ const ProjectItems = () => {
           <h5 className="c-projects__title text-6xl text-white pl-6 font-light">Zeus Gallery</h5>
 
           <Image
-            className="c-projects__image cursor-pointer"
+            className="c-projects__image cursor-pointer u-animated-background"
             src="/images/main.png"
             alt="My image"
             layout="fill"
