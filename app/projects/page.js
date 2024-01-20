@@ -11,7 +11,7 @@ const ProjectsPage = async () => {
 
   return (
     <>
-      <Hero data={data.home.projects} className="w-3/4" />
+      <Hero data={data.home.projects} className="w-full md:w-3/4" />
       <Gallery />
     </>
   );

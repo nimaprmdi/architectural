@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Controller, Pagination, Scrollbar } from "swiper/modules";
+import { Controller, Pagination, Scrollbar, Autoplay, EffectFade } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "swiper/css/effect-fade";
 import SwiperChild from "./SwiperChild";
 
 const Hero = ({ data, className }) => {
@@ -18,10 +19,15 @@ const Hero = ({ data, className }) => {
     <div className="h-screen bg-primary flex justify-end relative">
       {/* We can have Loading Component OR using classes Here OR Both */}
       {data && data.length > 0 ? (
-        <div className={className || "w-3/4"}>
+        <div className={className || "w-full md:w-3/4"}>
           <Swiper
-            modules={[Pagination, Scrollbar, Controller]}
+            modules={[Pagination, Scrollbar, Controller, Autoplay, EffectFade]}
             spaceBetween={0}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            effect={"fade"}
             slidesPerView={1}
             pagination={{ clickable: true, enabled: false }}
             scrollbar={{ el: null }}
@@ -50,10 +56,10 @@ const Hero = ({ data, className }) => {
       ) : null}
 
       {/* Titles */}
-      <div className="w-3/4 h-screen absolute left-0 top-0 block select-none pointer-events-none">
+      <div className="w-full lg:w-3/4 h-screen absolute left-0 top-0 block select-none pointer-events-none">
         {data && data.length > 0 ? (
           <Swiper
-            modules={[Pagination, Scrollbar, Controller]}
+            modules={[Pagination, Scrollbar, Controller, Autoplay, EffectFade]}
             spaceBetween={0}
             slidesPerView={1}
             pagination={{ clickable: true, enabled: false }}

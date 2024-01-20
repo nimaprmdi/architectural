@@ -1,0 +1,10 @@
+.c-cta__image {
+  position: relative;
+  height: 50vh;
+  width: 100%;
+
+  @include mq($from: md) {
+    width: 50%;
+    height: 90vh;
+  }
+}

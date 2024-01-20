@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const Cta = ({ data }) => {
   return (
-    <div className="w-full bg-accent flex justify-between items-center">
+    <div className="w-full bg-accent flex flex-wrap justify-between items-center">
       {data && data.length > 0
         ? data.map((about, index) => (
             <React.Fragment key={`about_component_key_${index}`}>
-              <div style={{ width: "50%", height: "90vh", position: "relative" }}>
+              <div className="c-cta__image">
                 <Image
                   alt="my alt"
                   className="object-cover u-animated-background"
@@ -16,7 +16,7 @@ const Cta = ({ data }) => {
                   layout="fill"
                 />
               </div>
-              <div className="w-1/2 h-max  flex justify-start pl-4 content-center flex-wrap">
+              <div className="w-full md:w-1/2 h-max  flex justify-start px-8 content-center flex-wrap py-14 md:py-0">
                 <h3 className="text-6xl text-white w-full">{about.descriptionTitle}</h3>
 
                 {about.descriptionTitle ? <span className="u-separator"></span> : <></>}

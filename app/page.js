@@ -16,7 +16,7 @@ export default async function Home() {
 
   return (
     <section className="w-100">
-      <Hero data={data.home.projects} className="w-3/4" />
+      <Hero data={data.home.projects} className="w-full md:w-3/4" />
       <Cta data={data.home.abouts} />
       <SelectedWorks data={data.home.projects} />
       <Advertise data={data.home.abouts} />

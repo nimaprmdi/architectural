@@ -5,7 +5,7 @@ const SwiperChild = () => {
   const swiper = useSwiper();
 
   return (
-    <div className="bg-red-950">
+    <div>
       <span
         className="c-slider__next pl-32 text-white pointer-events-auto select-auto u-left-10 bottom-1/3 cursor-pointer"
         style={{ position: "absolute", zIndex: 2000 }}

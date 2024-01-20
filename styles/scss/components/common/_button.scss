@@ -43,10 +43,18 @@ input[type="submit"] {
   &:hover,
   &:focus,
   &:active {
-    @apply bg-black text-white border-black border;
+    // @apply bg-black text-white border-black border;
   }
 }
 
 .btn--big {
   padding: rem(11px 44px);
+}
+
+.btn--high-contrast {
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: #000 !important;
+  }
 }

@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Controller, Pagination, Scrollbar } from "swiper/modules";
+import { Controller, Pagination, Scrollbar, Autoplay, EffectFade } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
-import SwiperChild from "./SwiperChild";
+import "swiper/css/effect-fade";
 import Image from "next/image";
 import SwiperNavs from "./SwiperNavs";
 
@@ -29,8 +29,13 @@ const SelectedWorks = ({ data }) => {
       <div className="w-full mt-8" style={{ height: "650px" }}>
         {data && data.length > 0 ? (
           <Swiper
-            modules={[Pagination, Scrollbar, Controller]}
+            modules={[Pagination, Scrollbar, Controller, EffectFade, Autoplay]}
             spaceBetween={0}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            speed={700}
             slidesPerView={1}
             pagination={{ clickable: true, enabled: false }}
             scrollbar={{ el: null }}
@@ -84,11 +89,11 @@ const SelectedWorks = ({ data }) => {
                     ) : null}
 
                     <div className="c-selected-work__button slider__btn absolute">
-                      <a className="c-btn btn--big lg:btn--secondary">View Case</a>
+                      <a className="c-btn btn--big btn--high-contrast">View Case</a>
                     </div>
                   </div>
 
-                  <div className="slider__context absolute lg:relative top-0 w-full lg:w-2/6 h-full flex items-center flex-wrap  content-center pl-8 ">
+                  <div className="slider__context absolute lg:relative top-0 w-full lg:w-2/6 h-full flex items-center flex-wrap  content-center pl-8 z-50">
                     <h4 className="text-black text-5xl bg-white">{selectedWork.projectTitle}</h4>
                     <p className="text-black mt-4 bg-white w-4/5 lg:w-full">{selectedWork.description}</p>
 

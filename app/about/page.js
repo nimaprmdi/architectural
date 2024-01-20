@@ -6,7 +6,7 @@ import React from "react";
 const AboutPage = () => {
   return (
     <>
-      <Hero />
+      <Hero className="w-full md:w-3/4" />
       <Cta />
       <Advertise />
       <Cta />

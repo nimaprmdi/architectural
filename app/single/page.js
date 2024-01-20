@@ -7,7 +7,7 @@ import React from "react";
 const SinglePage = () => {
   return (
     <>
-      <Hero />
+      <Hero className="w-full md:w-3/4" />
       <Cta />
       <Advertise />
       <Gallery />
