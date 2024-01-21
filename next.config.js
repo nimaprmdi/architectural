@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
   images: {
-    domains: ["media.graphassets.com"],
+    formats: ["image/webp"],
+    domains: ["media.graphassets.com", "nimapm.com"],
   },
 };
 

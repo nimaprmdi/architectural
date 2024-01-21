@@ -9,8 +9,13 @@ const Cta = ({ data }) => {
         ? data.map((about, index) => (
             <React.Fragment key={`about_component_key_${index}`}>
               <div style={{ width: "50%", height: "90vh", position: "relative" }}>
-                <Image
+                {/* <Image
                   className="object-cover"
+                  src={about.descriptionThumbnail.url || "/images/building_1.jpg"}
+                  layout="fill"
+                /> */}
+                <img
+                  className="object-cover w-full h-full"
                   src={about.descriptionThumbnail.url || "/images/building_1.jpg"}
                   layout="fill"
                 />

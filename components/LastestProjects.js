@@ -22,17 +22,28 @@ const LastestProjects = ({ data }) => {
               }`}
             >
               <div className="absolute top-3 left-3 flex gap-2 w-11/12 z-40">
-                {project.category.map((cat) => (
-                  <div className="bg-gray-200 px-6 py-1 mr-2 text-black">{cat}</div>
+                {project.category.map((cat, index) => (
+                  <div key={`className-${index}`} className="bg-gray-200 px-6 py-1 mr-2 text-black">
+                    {cat}
+                  </div>
                 ))}
               </div>
 
-              <Image
+              {/* <Image
                 src={project.projectsGallery[0].url || "/images/main.png"}
                 alt={project.projectTitle || "Image Title"}
                 layout="fill"
                 objectFit="cover"
                 loading="lazy"
+              /> */}
+
+              <img
+                src={project.projectsGallery[0].url || "/images/main.png"}
+                alt={project.projectTitle || "Image Title"}
+                layout="fill"
+                objectFit="cover"
+                loading="lazy"
+                className="w-full h-full"
               />
 
               <div
