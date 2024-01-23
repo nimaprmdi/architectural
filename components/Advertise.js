@@ -3,28 +3,6 @@ import React from "react";
 import { Icon } from "@iconify/react";
 
 const Advertise = ({ data }) => {
-  //   description
-  // :
-  // "Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis"
-  // descriptionThumbnail
-  // :
-  // {url: 'https://media.graphassets.com/output=format:jpg/adYz9WDyTmSeW7Dl58sO'}
-  // descriptionTitle
-  // :
-  // "Our DNA"
-  // featuresDescription
-  // :
-  // "asdasdasdasdasdasdasdasd"
-  // featuresIconsData
-  // :
-  // [{…}]
-  // featuresTitle
-  // :
-  // "asdasdasdasdasdasd"
-
-  // icons: (3)[("mdi:leaf", "mdi:tools", "ri:24-hours-line")];
-  // titles: (3)[("Eco-Friendly", "Reliable", "24*7 Support")];
-
   return (
     <section className="c-advertise w-full flex items-center justify-center relative pb-32 mb-32 mt-64">
       {data && data.length > 0 ? (

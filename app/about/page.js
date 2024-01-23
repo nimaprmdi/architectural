@@ -3,13 +3,20 @@ import Cta from "@/components/Cta";
 import Hero from "@/components/Hero";
 import React from "react";
 
-const AboutPage = () => {
+import { graphqlClient } from "@/lib/graphql-client";
+import { Home_DATA } from "@/graphQl/query";
+
+const AboutPage = async () => {
+  let data = await graphqlClient.request(Home_DATA, {
+    slug: "home-page",
+  });
+
   return (
     <>
-      <Hero className="w-full md:w-3/4" />
-      <Cta />
-      <Advertise />
-      <Cta />
+      <Hero data={data.home.projects} className="w-full md:w-3/4" />
+      <Cta data={data.home.abouts} />
+      <Advertise data={data.home.abouts} />
+      <Cta data={data.home.abouts} />
     </>
   );
 };
