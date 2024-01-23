@@ -45,7 +45,7 @@ const Hero = ({ data, className }) => {
                     loading="lazy"
                   /> */}
                   <img
-                    className="cursor-grab w-full h-full"
+                    className="cursor-grab w-full h-full u-animated-background"
                     src={project.projectsGallery[0].url || "/images/main.png"}
                     alt={project.projectTitle || "Image title"}
                     layout="fill"

@@ -12,8 +12,6 @@ export default async function Home() {
     slug: "home-page",
   });
 
-  // console.log(data);
-
   return (
     <section className="w-100">
       <Hero data={data.home.projects} className="w-full md:w-3/4" />

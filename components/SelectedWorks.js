@@ -66,7 +66,7 @@ const SelectedWorks = ({ data }) => {
                           loading="lazy"
                         /> */}
                         <img
-                          className="cursor-grab w-full h-full u-animated-background"
+                          className="cursor-grab w-full h-full u-animated-background u-animated-background--md"
                           src={selectedWork.projectsGallery[0].url || "/images/main.png"}
                           alt="My image"
                           // width={570}
@@ -94,7 +94,7 @@ const SelectedWorks = ({ data }) => {
                           loading="lazy"
                         /> */}
                         <img
-                          className="cursor-grab w-full h-full u-animated-background"
+                          className="cursor-grab w-full h-full u-animated-background u-animated-background--md"
                           src={selectedWork.projectsGallery[1].url || "/images/main.png"}
                           alt="My image"
                           // width={570}

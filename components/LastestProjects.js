@@ -47,7 +47,7 @@ const LastestProjects = ({ data }) => {
               />
 
               <div
-                className="w-11/12 haji absolute bottom-0 bg-blue-950 py-5 px-3 z-50"
+                className="w-11/12 haji absolute bottom-0 bg-primary py-5 px-3 z-50"
                 style={{ left: "50%", transform: "translate(-50% , 50%)" }}
               >
                 <p className="m-0 text-white text-xl text-center">{project.description}</p>

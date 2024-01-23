@@ -11,6 +11,7 @@ const ProjectItems = () => {
 
           <img
             className="c-projects__image cursor-pointer w-full h-full absolute top-0 u-animated-background"
+            style={{ position: "absolute" }}
             src="/images/main.png"
             alt="My image"
             layout="fill"
