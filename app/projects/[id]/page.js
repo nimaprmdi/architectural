@@ -24,6 +24,8 @@ const ProjectsSinglePage = () => {
   const [project, setProject] = useState("");
   const [userDetails, setUserDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
+  const [primaryCTA, setPrimaryCta] = useState({});
+  const [secondaryCTA, setSecondaryCTA] = useState({});
 
   const { id } = useParams();
   console.log("slug", id);
@@ -56,18 +58,34 @@ const ProjectsSinglePage = () => {
   }, []);
 
   useEffect(() => {
-    console.log("userDetails", project);
+    console.log("project", project.project);
+
+    project &&
+      setPrimaryCta({
+        title: project.project.descriptionTitle,
+        description: project.project.description,
+        image: project.project.descriptionThumbnail.url,
+      });
+
+    project &&
+      setSecondaryCTA({
+        title: project.project.featuresTitle,
+        description: project.project.featuresDescription,
+        image: project.project.featuresThumbnail.url,
+      });
   }, [project]);
 
   return (
-    <div>
-      <Hero data={project.project} className="w-full md:w-3/4" hasNav={false} />
-      <Cta data={[project.project]} />
-      <Gallery />
-      {/*   <Advertise data={data.home.abouts} />
-      <Gallery />
-      <Cta data={data.home.abouts} /> */}
-    </div>
+    project && (
+      <div>
+        <Hero data={project.project} className="w-full md:w-3/4" hasNav={false} />
+        <Cta data={Object.keys(primaryCTA).length > 0 ? primaryCTA : {}} />
+        <Gallery data={project.project.projectsGallery} />
+        {/*   <Advertise data={data.home.abouts} />
+      <Gallery />*/}
+        <Cta data={Object.keys(secondaryCTA).length > 0 ? secondaryCTA : {}} />
+      </div>
+    )
   );
 };
 

@@ -19,33 +19,32 @@ const Gallery = ({ data, hasCategory = false }) => {
   };
 
   useEffect(() => {
-    const projectSlides = data && data.projects.map((project) => project.projectsGallery[0].url);
+    const projectSlides = data && data.map((project) => project.url);
     setProjectSlides(projectSlides);
     setProjects(data);
 
-    console.log("data", data);
+    // console.log("data", data);
   }, [data]);
 
   return (
-    <section className="c-projects  flex flex-wrap justify-center mb-16 mt-16">
+    <section className="c-projects flex flex-wrap justify-center mb-16 mt-16">
       <ProjectsHeader hasCategory={hasCategory} title="Gallery" />
 
       <div className="c-projects__items w-full flex justify-between flex-wrap items-start max-w-screen-2xl">
         <button onClick={() => setOpen(true)}>Open Lightbox</button>
 
         {data &&
-          data.projects.map((project, projectIndex) => (
+          data.map((item, projectIndex) => (
             <ProjectItems
-              id={project.id}
+              id={item.id}
               key={`project_images_slider_${index}`}
-              src={project.projectsGallery[0].url}
+              src={item.url}
               index={projectIndex}
               onHandleClick={() => handleClick(index)}
             />
           ))}
-
-        <Lightbox open={open} close={() => setOpen(false)} slides={projectSlides} render={{ slide: NextJsImage }} />
       </div>
+      <Lightbox open={open} close={() => setOpen(false)} slides={projectSlides} render={{ slide: NextJsImage }} />
     </section>
   );
 };

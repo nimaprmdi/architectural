@@ -13,10 +13,10 @@ const Hero = ({ data, className, hasNav = true }) => {
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
 
-  console.log("data", data);
+  // console.log("data", data);
 
   useEffect(() => {
-    console.log(typeof data);
+    // console.log(typeof data);
   }, [data]);
 
   return (

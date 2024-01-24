@@ -53,6 +53,7 @@ const PROJECT = gql`
       descriptionTitle
       featuresDescription
       featuresIcons
+      featuresTitle
       featuresThumbnail {
         handle
         url(transformation: { document: { output: { format: jpg } } })
