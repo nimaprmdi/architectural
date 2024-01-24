@@ -3,20 +3,19 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Controller, Pagination, Scrollbar, Autoplay, EffectFade } from "swiper/modules";
+import SwiperChild from "./SwiperChild";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-fade";
-import SwiperChild from "./SwiperChild";
 
 const Hero = ({ data, className, hasNav = true }) => {
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
 
-  // console.log("data", data);
-
   useEffect(() => {
-    // console.log(typeof data);
+    console.log("data", Array.isArray(data));
+    console.log("data", data);
   }, [data]);
 
   return (
@@ -39,47 +38,32 @@ const Hero = ({ data, className, hasNav = true }) => {
             controller={{ control: secondSwiper }}
             className="swiper w-100 h-full bg-primary"
           >
-            {typeof data === "Array" &&
+            {/* If items was ARRAY */}
+            {data &&
+              Array.isArray(data) &&
               data.map((project, index) => (
                 <SwiperSlide key={`project_slider_image_${index}`} className="w-100 h-52 bg-primary text-white">
                   <div className="w-100 h-full flex justify-center items-center">
-                    {/* <Image
-                    className="cursor-grab"
-                    src={project.projectsGallery[0].url || "/images/main.png"}
-                    alt={project.projectTitle || "Image title"}
-                    layout="fill"
-                    objectFit="cover"
-                    loading="lazy"
-                  /> */}
                     <img
                       className="cursor-grab w-full h-full u-animated-background"
                       src={project.projectsGallery[0].url || "/images/main.png"}
                       alt={project.projectTitle || "Image title"}
                       layout="fill"
-                      objectFit="cover"
                       loading="lazy"
                     />
                   </div>
                 </SwiperSlide>
               ))}
 
-            {typeof data === "object" && (
+            {/* If items was OBJECT */}
+            {data && !Array.isArray(data) && (
               <SwiperSlide className="w-100 h-52 bg-primary text-white">
                 <div className="w-100 h-full flex justify-center items-center">
-                  {/* <Image
-                    className="cursor-grab"
-                    src={project.projectsGallery[0].url || "/images/main.png"}
-                    alt={project.projectTitle || "Image title"}
-                    layout="fill"
-                    objectFit="cover"
-                    loading="lazy"
-                  /> */}
                   <img
                     className="cursor-grab w-full h-full u-animated-background"
                     src={data.projectsGallery[0].url || "/images/main.png"}
                     alt={data.projectTitle || "Image title"}
                     layout="fill"
-                    objectFit="cover"
                     loading="lazy"
                   />
                 </div>
@@ -103,7 +87,8 @@ const Hero = ({ data, className, hasNav = true }) => {
             allowTouchMove={false}
             className="main-swiper w-100 h-full relative"
           >
-            {typeof data === "Array" &&
+            {data &&
+              Array.isArray(data) &&
               data.map((project, index) => (
                 <SwiperSlide key={`project_slider_title_${index}`} className="w-100 h-52  text-white">
                   <div className="w-100 h-full flex justify-start items-center">
@@ -114,7 +99,7 @@ const Hero = ({ data, className, hasNav = true }) => {
                 </SwiperSlide>
               ))}
 
-            {typeof data === "object" && (
+            {data && !Array.isArray(data) && (
               <SwiperSlide className="w-100 h-52  text-white">
                 <div className="w-100 h-full flex justify-start items-center">
                   <h3 className="absolute top-1/3 u-left-10 font-normal text-4xl md:text-6xl">{data.projectTitle}</h3>

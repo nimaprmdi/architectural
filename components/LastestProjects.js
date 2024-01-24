@@ -29,19 +29,10 @@ const LastestProjects = ({ data }) => {
                 ))}
               </div>
 
-              {/* <Image
-                src={project.projectsGallery[0].url || "/images/main.png"}
-                alt={project.projectTitle || "Image Title"}
-                layout="fill"
-                objectFit="cover"
-                loading="lazy"
-              /> */}
-
               <img
                 src={project.projectsGallery[0].url || "/images/main.png"}
                 alt={project.projectTitle || "Image Title"}
                 layout="fill"
-                objectFit="cover"
                 loading="lazy"
                 className="w-full h-full u-animated-background"
               />

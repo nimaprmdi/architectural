@@ -12,13 +12,16 @@ const SinglePage = async () => {
     slug: "home-page",
   });
 
+  console.log("------------------------------------------------------------------------------------------");
+  console.log("data.home.abouts", data.home.abouts);
+
   return (
     <>
       <Hero data={data.home.projects} className="w-full md:w-3/4" />
       <Cta data={data.home.abouts} />
-      <Advertise data={data.home.abouts} />
+      {/*<Advertise data={data.home.abouts} />
       <Gallery />
-      <Cta data={data.home.abouts} />
+      <Cta data={data.home.abouts} /> */}
     </>
   );
 };

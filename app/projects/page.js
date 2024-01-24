@@ -5,20 +5,20 @@ import { graphqlClient } from "@/lib/graphql-client";
 import { Home_DATA, POJECTS_SLIDERS } from "@/graphQl/query";
 
 const ProjectsPage = async () => {
-  // ------
+  // STATE
+  let projects = [];
+
+  // API
   let projectsData = await graphqlClient.request(POJECTS_SLIDERS);
-  // ------
+
   let homeData = await graphqlClient.request(Home_DATA, {
     slug: "home-page",
   });
-  // ------
-
-  // ------
 
   return (
     <>
       <Hero data={homeData.home.projects} className="w-full md:w-3/4" />
-      <Gallery data={projectsData} hasCategory />
+      <Gallery data={projectsData.projects} hasCategory={true} />
     </>
   );
 };

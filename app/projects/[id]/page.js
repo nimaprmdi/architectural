@@ -1,44 +1,33 @@
 "use client";
-import { useParams } from "next/navigation";
 import Hero from "@/components/Hero";
 import Cta from "@/components/Cta";
-import Advertise from "@/components/Advertise";
 import Gallery from "@/components/Gallery";
-import { useQuery } from "@apollo/client";
+import { useParams } from "next/navigation";
 import { graphqlClient } from "@/lib/graphql-client";
 import { PROJECT } from "@/graphQl/query";
-
 import { React, useState, useEffect } from "react";
-import { GraphQLClient, gql } from "graphql-request";
-
-const client = new GraphQLClient(
-  "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clracxbkk130q01w7x431qrgi/master",
-  {
-    headers: {
-      // Authorization: `Bearer ${HYGRAPH_PERMANENTAUTH_TOKEN}`,
-    },
-  }
-);
 
 const ProjectsSinglePage = () => {
+  // States
   const [project, setProject] = useState("");
   const [userDetails, setUserDetails] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [primaryCTA, setPrimaryCta] = useState({});
   const [secondaryCTA, setSecondaryCTA] = useState({});
 
+  // Params
   const { id } = useParams();
-  console.log("slug", id);
 
+  /*------------------------------------*\
+    # Request From a client component
+  \*------------------------------------*/
   const getUserDetailByGraphQLRequestAPICall = async () => {
     try {
       setIsLoading(true);
       const variables = { id: id };
       // const response = await client.request(POJECTS_SLIDERS);
-      const response = await client.request(PROJECT, {
-        id: id,
-      });
 
+      const response = await graphqlClient.request(PROJECT, variables);
       setProject(response);
 
       if (response?.nextUser) {
@@ -57,9 +46,13 @@ const ProjectsSinglePage = () => {
     return () => {};
   }, []);
 
+  /*------------------------------------*\
+    # Handle Projects CTA components
+  \*------------------------------------*/
   useEffect(() => {
     console.log("project", project.project);
 
+    // CTA Object
     project &&
       setPrimaryCta({
         title: project.project.descriptionTitle,
@@ -67,6 +60,7 @@ const ProjectsSinglePage = () => {
         image: project.project.descriptionThumbnail.url,
       });
 
+    // CTA Second Object
     project &&
       setSecondaryCTA({
         title: project.project.featuresTitle,
@@ -77,14 +71,12 @@ const ProjectsSinglePage = () => {
 
   return (
     project && (
-      <div>
+      <>
         <Hero data={project.project} className="w-full md:w-3/4" hasNav={false} />
         <Cta data={Object.keys(primaryCTA).length > 0 ? primaryCTA : {}} />
         <Gallery data={project.project.projectsGallery} />
-        {/*   <Advertise data={data.home.abouts} />
-      <Gallery />*/}
         <Cta data={Object.keys(secondaryCTA).length > 0 ? secondaryCTA : {}} />
-      </div>
+      </>
     )
   );
 };

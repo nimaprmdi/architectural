@@ -70,4 +70,12 @@ const PROJECT = gql`
   }
 `;
 
-export { Home_DATA, POJECTS_SLIDERS, PROJECT };
+const CATS = gql`
+  query getCats {
+    projects {
+      category
+    }
+  }
+`;
+
+export { Home_DATA, POJECTS_SLIDERS, PROJECT, CATS };
