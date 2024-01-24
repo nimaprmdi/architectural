@@ -54,9 +54,25 @@ const SelectedWorks = ({ data }) => {
                     </div>
 
                     {selectedWork.projectsGallery[0] ? (
+<<<<<<< HEAD
                       <div className="c-selected-work__main-image image lg:absolute right-0 top-0 ">
                         <Image
                           className="cursor-grab u-animated-background u-animated-background--md "
+=======
+                      <div className="c-selected-work__main-image image lg:absolute right-0 top-0">
+                        {/* <Image
+                          className="cursor-grab"
+>>>>>>> e627c5800d24a27c0aef72b3e2642b027960ea8b
+                          src={selectedWork.projectsGallery[0].url || "/images/main.png"}
+                          alt="My image"
+                          // width={570}
+                          // height={385}
+                          layout="fill"
+                          objectFit="cover"
+                          loading="lazy"
+                        /> */}
+                        <img
+                          className="cursor-grab w-full h-full"
                           src={selectedWork.projectsGallery[0].url || "/images/main.png"}
                           alt="My image"
                           // width={570}
@@ -73,6 +89,7 @@ const SelectedWorks = ({ data }) => {
                         className="c-selected-work__secondary-image image absolute left-0 bottom-0"
                         style={{ width: "45%", height: "400px" }}
                       >
+<<<<<<< HEAD
                         <div className="w-full h-full ">
                           <Image
                             className="cursor-grab u-animated-background u-animated-background--md"
@@ -85,6 +102,28 @@ const SelectedWorks = ({ data }) => {
                             loading="lazy"
                           />
                         </div>
+=======
+                        {/* <Image
+                          className="cursor-grab"
+                          src={selectedWork.projectsGallery[1].url || "/images/main.png"}
+                          alt="My image"
+                          // width={570}
+                          // height={385}
+                          layout="fill"
+                          objectFit="cover"
+                          loading="lazy"
+                        /> */}
+                        <img
+                          className="cursor-grab w-full h-full"
+                          src={selectedWork.projectsGallery[1].url || "/images/main.png"}
+                          alt="My image"
+                          // width={570}
+                          // height={385}
+                          layout="fill"
+                          objectFit="cover"
+                          loading="lazy"
+                        />
+>>>>>>> e627c5800d24a27c0aef72b3e2642b027960ea8b
                       </div>
                     ) : null}
 

@@ -9,14 +9,28 @@ const ProjectItems = () => {
         <Link href="/">
           <h5 className="c-projects__title text-6xl text-white pl-6 font-light">Zeus Gallery</h5>
 
+<<<<<<< HEAD
           <Image
             className="c-projects__image cursor-pointer u-animated-background"
+=======
+          <img
+            className="c-projects__image cursor-pointer w-full h-full absolute top-0"
+>>>>>>> e627c5800d24a27c0aef72b3e2642b027960ea8b
             src="/images/main.png"
             alt="My image"
             layout="fill"
             objectFit="cover"
             loading="lazy"
           />
+
+          {/* <Image
+            className="c-projects__image cursor-pointer"
+            src="/images/main.png"
+            alt="My image"
+            layout="fill"
+            objectFit="cover"
+            loading="lazy"
+          /> */}
         </Link>
       </div>
     </div>

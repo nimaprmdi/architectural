@@ -8,10 +8,21 @@ const Cta = ({ data }) => {
       {data && data.length > 0
         ? data.map((about, index) => (
             <React.Fragment key={`about_component_key_${index}`}>
+<<<<<<< HEAD
               <div className="c-cta__image">
                 <Image
                   alt="my alt"
                   className="object-cover u-animated-background"
+=======
+              <div style={{ width: "50%", height: "90vh", position: "relative" }}>
+                {/* <Image
+                  className="object-cover"
+>>>>>>> e627c5800d24a27c0aef72b3e2642b027960ea8b
+                  src={about.descriptionThumbnail.url || "/images/building_1.jpg"}
+                  layout="fill"
+                /> */}
+                <img
+                  className="object-cover w-full h-full"
                   src={about.descriptionThumbnail.url || "/images/building_1.jpg"}
                   layout="fill"
                 />
