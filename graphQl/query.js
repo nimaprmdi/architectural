@@ -34,9 +34,39 @@ const POJECTS_SLIDERS = gql`
       projectTitle
       projectsGallery {
         url(transformation: { document: { output: { format: jpg } } })
+        handle
+      }
+      id
+    }
+  }
+`;
+
+const PROJECT = gql`
+  query projectSingle($id: ID!) {
+    project(where: { id: $id }) {
+      category
+      description
+      descriptionThumbnail {
+        handle
+        url(transformation: { document: { output: { format: jpg } } })
+      }
+      descriptionTitle
+      featuresDescription
+      featuresIcons
+      featuresThumbnail {
+        handle
+        url(transformation: { document: { output: { format: jpg } } })
+      }
+      id
+      isSelected
+      isSlider
+      projectSlug
+      projectTitle
+      projectsGallery {
+        url(transformation: { document: { output: { format: jpg } } })
       }
     }
   }
 `;
 
-export { Home_DATA, POJECTS_SLIDERS };
+export { Home_DATA, POJECTS_SLIDERS, PROJECT };

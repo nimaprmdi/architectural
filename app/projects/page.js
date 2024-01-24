@@ -2,17 +2,23 @@ import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import React from "react";
 import { graphqlClient } from "@/lib/graphql-client";
-import { Home_DATA } from "@/graphQl/query";
+import { Home_DATA, POJECTS_SLIDERS } from "@/graphQl/query";
 
 const ProjectsPage = async () => {
-  let data = await graphqlClient.request(Home_DATA, {
+  // ------
+  let projectsData = await graphqlClient.request(POJECTS_SLIDERS);
+  // ------
+  let homeData = await graphqlClient.request(Home_DATA, {
     slug: "home-page",
   });
+  // ------
+
+  // ------
 
   return (
     <>
-      <Hero data={data.home.projects} className="w-full md:w-3/4" />
-      <Gallery hasCategory />
+      <Hero data={homeData.home.projects} className="w-full md:w-3/4" />
+      <Gallery data={projectsData} hasCategory />
     </>
   );
 };
