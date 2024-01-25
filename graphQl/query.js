@@ -31,12 +31,13 @@ const Home_DATA = gql`
 const POJECTS_SLIDERS = gql`
   query projectsSliders {
     projects(where: { isSlider: true }) {
+      id
+      category
       projectTitle
       projectsGallery {
         url(transformation: { document: { output: { format: jpg } } })
         handle
       }
-      id
     }
   }
 `;

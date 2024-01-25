@@ -50,8 +50,6 @@ const ProjectsSinglePage = () => {
     # Handle Projects CTA components
   \*------------------------------------*/
   useEffect(() => {
-    console.log("project", project.project);
-
     // CTA Object
     project &&
       setPrimaryCta({

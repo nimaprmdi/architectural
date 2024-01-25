@@ -13,10 +13,7 @@ const Hero = ({ data, className, hasNav = true }) => {
   const [firstSwiper, setFirstSwiper] = useState(null);
   const [secondSwiper, setSecondSwiper] = useState(null);
 
-  useEffect(() => {
-    console.log("data", Array.isArray(data));
-    console.log("data", data);
-  }, [data]);
+  useEffect(() => {}, [data]);
 
   return (
     <div className="h-screen bg-primary flex justify-end relative">

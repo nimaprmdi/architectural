@@ -7,36 +7,47 @@ import NextJsImage from "../components/NextJsImage";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 
-const Gallery = ({ data, hasCategory = false, onCatClick }) => {
-  //
+const Gallery = ({ data, hasCategory = false }) => {
+  // States
+  const [currentCat, setCurrentCat] = useState("");
   const [index, setIndex] = useState(-1);
-  const [projects, setProjects] = useState([]);
+  const [galleryData, setGalleryData] = useState();
   const [projectSlides, setProjectSlides] = useState([]);
   const [open, setOpen] = useState(false);
 
-  const handleClick = (e) => {
-    console.log("e", e);
+  // Events
+  const handleClick = (e, cat) => {
+    setCurrentCat(cat);
   };
 
+  // Effects
   useEffect(() => {
-    const projectSlides = data && data.map((project) => project.url);
-    setProjectSlides(projectSlides);
-    setProjects(data);
+    setGalleryData([...data]);
   }, [data]);
+
+  useEffect(() => {
+    if (currentCat === "" || currentCat === "all") {
+      setGalleryData(data);
+    } else {
+      const filteredData = data.filter((item) => item.category.find((catItem) => catItem === currentCat));
+      setGalleryData(filteredData);
+    }
+  }, [currentCat]);
 
   return (
     <section className="c-projects flex flex-wrap justify-center mb-16 mt-16">
-      <ProjectsHeader onCatClick={onCatClick} hasCategory={hasCategory} title="Gallery" />
+      <ProjectsHeader onCatClick={handleClick} hasCategory={hasCategory} title="Gallery" />
 
       <div className="c-projects__items w-full flex justify-start flex-wrap items-start max-w-screen-2xl">
-        {data &&
-          data.map((item, projectIndex) => (
+        {galleryData &&
+          galleryData.map((item, itemIndex) => (
             <ProjectItems
               id={item.id}
-              key={`project_images_slider_${projectIndex}_${Math.random() * 100}`}
+              title={item.title}
+              key={`project_images_slider_${itemIndex}_${Math.random() * 100}`}
               src={item.url}
-              index={projectIndex}
-              onHandleClick={() => handleClick(projectIndex)}
+              index={itemIndex}
+              onHandleClick={() => handleClick(itemIndex)}
             />
           ))}
       </div>

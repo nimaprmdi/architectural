@@ -15,10 +15,26 @@ const ProjectsPage = async () => {
     slug: "home-page",
   });
 
+  // const projectSlides = projectsData.projects.map((project) => {
+  //   return {
+  //     url: project.projectsGallery[0].url,
+  //     id: project.id,
+  //     title: project.projectTitle,
+  //     category: project.category,
+  //   };
+  // });
+
+  const projectSlides = projectsData.projects.map((project) => ({
+    url: project.projectsGallery[0].url,
+    title: project.projectTitle,
+    category: project.category,
+    id: project.id,
+  }));
+
   return (
     <>
       <Hero data={homeData.home.projects} className="w-full md:w-3/4" />
-      <Gallery data={projectsData.projects} hasCategory={true} />
+      <Gallery data={projectSlides} hasCategory={true} />
     </>
   );
 };

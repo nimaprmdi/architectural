@@ -12,9 +12,6 @@ const SinglePage = async () => {
     slug: "home-page",
   });
 
-  console.log("------------------------------------------------------------------------------------------");
-  console.log("data.home.abouts", data.home.abouts);
-
   return (
     <>
       <Hero data={data.home.projects} className="w-full md:w-3/4" />
