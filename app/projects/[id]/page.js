@@ -72,7 +72,7 @@ const ProjectsSinglePage = () => {
       <>
         <Hero data={project.project} className="w-full md:w-3/4" hasNav={false} />
         <Cta data={Object.keys(primaryCTA).length > 0 ? primaryCTA : {}} />
-        <Gallery data={project.project.projectsGallery} />
+        <Gallery data={project.project.projectsGallery} hasCategory={false} isLink={false} hasImageHover={false} />
         <Cta data={Object.keys(secondaryCTA).length > 0 ? secondaryCTA : {}} />
       </>
     )

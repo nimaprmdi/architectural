@@ -6,9 +6,10 @@ const Home_DATA = gql`
       projects(where: { OR: [{ isSlider: true }, { isSelected: true }] }) {
         projectTitle
         description
+        id
         projectsGallery {
           mimeType
-          url(transformation: { document: { output: { format: jpg } } })
+          url(transformation: { document: {} })
         }
         isSelected
         isSlider
@@ -18,11 +19,17 @@ const Home_DATA = gql`
         description
         descriptionTitle
         descriptionThumbnail {
-          url(transformation: { document: { output: { format: jpg } } })
+          url(transformation: { document: {} })
+          handle
         }
         featuresTitle
         featuresIconsData
         featuresDescription
+        locationTitle
+        locationDescription
+        locationThumbnail {
+          url(transformation: { document: {} })
+        }
       }
     }
   }
@@ -35,8 +42,9 @@ const POJECTS_SLIDERS = gql`
       category
       projectTitle
       projectsGallery {
-        url(transformation: { document: { output: { format: jpg } } })
+        url(transformation: { document: {} })
         handle
+        mimeType
       }
     }
   }
@@ -49,7 +57,7 @@ const PROJECT = gql`
       description
       descriptionThumbnail {
         handle
-        url(transformation: { document: { output: { format: jpg } } })
+        url(transformation: { document: {} })
       }
       descriptionTitle
       featuresDescription
@@ -57,7 +65,7 @@ const PROJECT = gql`
       featuresTitle
       featuresThumbnail {
         handle
-        url(transformation: { document: { output: { format: jpg } } })
+        url(transformation: { document: {} })
       }
       id
       isSelected
@@ -65,7 +73,9 @@ const PROJECT = gql`
       projectSlug
       projectTitle
       projectsGallery {
-        url(transformation: { document: { output: { format: jpg } } })
+        url(transformation: { document: {} })
+        handle
+        mimeType
       }
     }
   }

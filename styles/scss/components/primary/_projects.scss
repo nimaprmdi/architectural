@@ -1,4 +1,4 @@
-.c-projects__item {
+.c-projects__item:not(.c-projects__item--no-hover) {
   &:hover,
   &:focus,
   &:active {

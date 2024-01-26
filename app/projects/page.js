@@ -24,12 +24,15 @@ const ProjectsPage = async () => {
   //   };
   // });
 
-  const projectSlides = projectsData.projects.map((project) => ({
-    url: project.projectsGallery[0].url,
-    title: project.projectTitle,
-    category: project.category,
-    id: project.id,
-  }));
+  const projectSlides = projectsData.projects.map((project) => {
+    return {
+      url: project.projectsGallery[0].url,
+      title: project.projectTitle,
+      category: project.category,
+      id: project.id,
+      gallery: JSON.stringify(project.projectsGallery),
+    };
+  });
 
   return (
     <>

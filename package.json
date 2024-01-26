@@ -13,6 +13,7 @@
   "dependencies": {
     "@apollo/client": "^3.8.9",
     "@next/bundle-analyzer": "^14.0.4",
+    "ffmpeg-static": "^5.2.0",
     "graphql": "^16.8.1",
     "graphql-request": "^6.1.0",
     "inuitcss": "^6.0.0",

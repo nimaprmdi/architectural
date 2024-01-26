@@ -43,6 +43,8 @@ input[type="submit"] {
   &:hover,
   &:focus,
   &:active {
+    background-color: #000;
+    color: #fff;
     // @apply bg-black text-white border-black border;
   }
 }

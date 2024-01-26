@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -16,11 +15,12 @@ const LastestProjects = ({ data }) => {
           {data.map((project, index) => (
             <Link
               key={`main_posts_${index}`}
-              href="/"
+              href={`/projects/${project.id}`}
               className={`w-1/4 h-96 bg-accent cursor-pointer min-w-full md:min-w-96 relative mb-24 ${
                 index < 3 ? "" : "hidden"
               }`}
             >
+              {console.log("oriject id", project)}
               <div className="absolute top-3 left-3 flex gap-2 w-11/12 z-40">
                 {project.category.map((cat, index) => (
                   <div key={`className-${index}`} className="bg-gray-200 px-6 py-1 mr-2 text-black">
