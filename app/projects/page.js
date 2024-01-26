@@ -1,3 +1,4 @@
+"use client";
 import Hero from "@/components/Hero";
 import Gallery from "@/components/Gallery";
 import React from "react";

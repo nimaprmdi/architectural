@@ -14,7 +14,7 @@ const ProjectItems = ({ id, src, title, isLink = true, onHandleClick, mimeType, 
         }`}
       >
         {isLink ? (
-          <Link href={`/projects/${id}`}>
+          <Link href={`/archive?id=${id}`}>
             <ImageContent title={title} src={src} mimeType={mimeType} />
           </Link>
         ) : (

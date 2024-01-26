@@ -19,7 +19,7 @@ const Header = () => {
         <h1 className="c-header__logo text-white text-base md:text-2xl">Architectural</h1>
       </div>
 
-      <div className="c-header__navs  w-2/3 lg:w-1/4 flex justify-start md:justify-start items-center gap-8 pl-2 xl:pl-9 order-2 lg:order-1 my-4">
+      <div className="c-header__navs  w-full lg:w-1/4 flex justify-center sm:justify-start items-center gap-8 pl-2 md:pl-9 order-2 lg:order-1 my-4">
         <Link className="text-white hover:text-gray-500 cursor-pointer" href="/">
           Home
         </Link>
@@ -33,7 +33,7 @@ const Header = () => {
         </Link>
       </div>
 
-      <div className="c-header__navs w-1/3 lg:w-1/4 flex pl-4 xl:pl-0 justify-end xl:justify-end items-center gap-2 md:gap-8 order-3 md:pr-6">
+      <div className="c-header__navs  w-full lg:w-1/4 flex pl-4 xl:pl-0 justify-center sm:justify-end items-center gap-2 sm:gap-8 order-3 sm:pr-6">
         <Link className="text-white hover:text-gray-500 cursor-pointer" href="/">
           <Icon icon="ant-design:facebook-outlined" color="#fff" width={24} height={24} />
         </Link>

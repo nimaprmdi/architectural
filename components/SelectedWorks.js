@@ -16,9 +16,9 @@ const SelectedWorks = ({ data }) => {
   const [secondSwiper, setSecondSwiper] = useState(null);
 
   return (
-    <div className="c-selected-work w-full px-12 pb-24">
+    <div className="c-selected-work w-full px-12 lg:pb-24">
       <div className="c-selected-work__header w-full  pt-32">
-        <h2 className="u-has-before-separator text-6xl font-normal">Selected Work</h2>
+        <h2 className="u-has-before-separator text-2xl md:text-6xl font-normal break-words">Selected Work</h2>
 
         <p className="u-pl-5-percent u-max-w-1360 py-6 mb-0">
           Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed
@@ -29,12 +29,12 @@ const SelectedWorks = ({ data }) => {
       <div className="w-full mt-8" style={{ height: "650px" }}>
         {data && data.length > 0 ? (
           <Swiper
-            modules={[Pagination, Scrollbar, Controller, EffectFade, Autoplay]}
+            modules={[Pagination, Scrollbar, Controller, EffectFade]}
             spaceBetween={0}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
             speed={700}
             slidesPerView={1}
             pagination={{ clickable: true, enabled: false }}
@@ -44,9 +44,9 @@ const SelectedWorks = ({ data }) => {
             className="swiper w-100 h-full "
           >
             {data.map((selectedWork, index) => (
-              <SwiperSlide key={`selectedworks_slider_${index}`} className="w-full h-52  text-white relative">
+              <SwiperSlide key={`selectedworks_slider_${index}`} className="w-full  md:h-52 text-white relative">
                 <div className="w-full h-full flex flex-wrap">
-                  <div className="slider__images mt-16 w-full lg:w-4/6 h-full flex justify-center relative items-center">
+                  <div className="slider__images md:mt-16 w-full lg:w-4/6  h-96 md:h-full flex justify-center relative items-center">
                     <div className="slider__counter absolute" style={{ top: "15%", left: "20%" }}>
                       <span className="text-9xl" style={{ color: "#a9ceee" }}>
                         {index <= 9 ? `0${++index}` : ++index}
@@ -80,12 +80,12 @@ const SelectedWorks = ({ data }) => {
                       </div>
                     ) : null}
 
-                    <div className="c-selected-work__button slider__btn absolute">
+                    <div className="c-selected-work__button slider__btn absolute top-36 h-auto ">
                       <a className="c-btn btn--big btn--high-contrast">View Case</a>
                     </div>
                   </div>
 
-                  <div className="slider__context absolute lg:relative top-0 w-full lg:w-2/6 h-full flex items-center flex-wrap  content-center pl-8 z-50">
+                  <div className="slider__context absolute lg:relative top-0 w-full lg:w-2/6 h-96 md:h-full flex items-center flex-wrap  content-center pl-8 z-50">
                     <h4 className="text-black text-5xl bg-white">{selectedWork.projectTitle}</h4>
                     <p className="text-black mt-4 bg-white w-4/5 lg:w-full">{selectedWork.description}</p>
 

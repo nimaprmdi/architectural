@@ -89,4 +89,16 @@ const CATS = gql`
   }
 `;
 
-export { Home_DATA, POJECTS_SLIDERS, PROJECT, CATS };
+const FOOTER = gql`
+  query getFooter {
+    footers {
+      footerAddress
+      footerEmail
+      footerPhone
+      footerSiteTitle
+      id
+    }
+  }
+`;
+
+export { Home_DATA, POJECTS_SLIDERS, PROJECT, CATS, FOOTER };

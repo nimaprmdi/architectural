@@ -15,7 +15,7 @@ const LastestProjects = ({ data }) => {
           {data.map((project, index) => (
             <Link
               key={`main_posts_${index}`}
-              href={`/projects/${project.id}`}
+              href={`/archive?id=${project.id}`}
               className={`w-1/4 h-96 bg-accent cursor-pointer min-w-full md:min-w-96 relative mb-24 ${
                 index < 3 ? "" : "hidden"
               }`}

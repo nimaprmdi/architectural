@@ -16,7 +16,7 @@ const Hero = ({ data, className, hasNav = true }) => {
   useEffect(() => {}, [data]);
 
   return (
-    <div className="h-screen bg-primary flex justify-end relative">
+    <div className="h-80 md:h-screen bg-primary flex justify-end relative">
       {/* We can have Loading Component OR using classes Here OR Both */}
       {data && (data.length > 0 || Object.keys(data).length > 0) ? (
         <div className={className || "w-full md:w-3/4"}>
@@ -39,10 +39,10 @@ const Hero = ({ data, className, hasNav = true }) => {
             {data &&
               Array.isArray(data) &&
               data.map((project, index) => (
-                <SwiperSlide key={`project_slider_image_${index}`} className="w-100 h-52 bg-primary text-white">
+                <SwiperSlide key={`project_slider_image_${index}`} className="w-100 h-10 bg-primary text-white">
                   <div className="w-100 h-full flex justify-center items-center">
                     <img
-                      className="cursor-grab w-full h-full u-animated-background"
+                      className="cursor-grab w-full h-full u-animated-background object-cover"
                       src={project.projectsGallery[0].url || "/images/main.png"}
                       alt={project.projectTitle || "Image title"}
                       layout="fill"
@@ -57,7 +57,7 @@ const Hero = ({ data, className, hasNav = true }) => {
               <SwiperSlide className="w-100 h-52 bg-primary text-white">
                 <div className="w-100 h-full flex justify-center items-center">
                   <img
-                    className="cursor-grab w-full h-full u-animated-background"
+                    className="cursor-grab w-full h-full u-animated-background object-cover"
                     src={data.projectsGallery[0].url || "/images/main.png"}
                     alt={data.projectTitle || "Image title"}
                     layout="fill"
@@ -71,7 +71,7 @@ const Hero = ({ data, className, hasNav = true }) => {
       ) : null}
 
       {/* Titles */}
-      <div className="w-full lg:w-3/4 h-screen absolute left-0 top-0 block select-none pointer-events-none">
+      <div className="w-full lg:w-3/4 h-80 md:h-screen absolute left-0 top-0 block select-none pointer-events-none">
         {data && (data.length > 0 || Object.keys(data).length > 0) ? (
           <Swiper
             modules={[Pagination, Scrollbar, Controller, Autoplay, EffectFade]}
@@ -89,7 +89,7 @@ const Hero = ({ data, className, hasNav = true }) => {
               data.map((project, index) => (
                 <SwiperSlide key={`project_slider_title_${index}`} className="w-100 h-52  text-white">
                   <div className="w-100 h-full flex justify-start items-center">
-                    <h3 className="absolute top-1/3 u-left-10 font-normal text-4xl md:text-6xl">
+                    <h3 className="c-hero__title absolute top-1/3 u-left-10 font-normal text-4xl md:text-6xl">
                       {project.projectTitle}
                     </h3>
                   </div>
