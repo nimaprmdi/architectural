@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-const Cta = ({ data }) => {
+const Cta = ({ data, hasReadMore = true }) => {
   /**
    * title
    * description
@@ -26,9 +26,13 @@ const Cta = ({ data }) => {
 
             <p className="text-white w-full">{data.description}</p>
 
-            <Link href="/about" className="c-btn">
-              Read More
-            </Link>
+            {hasReadMore ? (
+              <Link href="/about" className="c-btn">
+                Read More
+              </Link>
+            ) : (
+              ""
+            )}
           </div>
         </React.Fragment>
       ) : null}

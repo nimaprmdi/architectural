@@ -34,3 +34,17 @@
     background-color: #000;
   }
 }
+
+.c-slider__p {
+  @include mq($until: md) {
+    font-size: 14px;
+    line-height: 200%;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}

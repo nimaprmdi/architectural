@@ -15,7 +15,7 @@ const Advertise = ({ data }) => {
 
           <div className="c-advertise__desc w-100 flex justify-center  mt-7">
             <p className="max-w-2xl text-white">
-              {data[0].featuresTitle ||
+              {data[0].featuresDescription ||
                 "Amet eu facilisi posuere ut at cras non ipsum proin nunc purus tellus ultricies velit elementum ut dui sed augue ultrices phasellus ullamcorper condimentum ut suspendisse viverra ornare sit venenatis"}
             </p>
           </div>

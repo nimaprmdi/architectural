@@ -9,7 +9,7 @@ import "yet-another-react-lightbox/styles.css";
 
 const Gallery = ({ data, hasCategory = false, isLink, hasImageHover }) => {
   // States
-  const [currentCat, setCurrentCat] = useState("");
+  const [currentCat, setCurrentCat] = useState("all");
 
   const [galleryData, setGalleryData] = useState();
   const [gallerySlides, setGallerySlides] = useState([]);

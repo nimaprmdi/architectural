@@ -28,7 +28,7 @@ const Footer = async () => {
 
       <div className={`${itemsClass} ${centerClass}`}>
         <Icon width={24} color="white" icon="tabler:phone" />
-        <a href="tel:(603) 555-0123" className="ml-4 text-white">
+        <a href={`tel:${footerData.footerPhone}`} className="ml-4 text-white">
           {footerData.footerPhone}
         </a>
       </div>

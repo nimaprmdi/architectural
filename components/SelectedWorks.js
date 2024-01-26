@@ -11,6 +11,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import Image from "next/image";
 import SwiperNavs from "./SwiperNavs";
+import Link from "next/link";
 
 const SelectedWorks = ({ data }) => {
   const [secondSwiper, setSecondSwiper] = useState(null);
@@ -81,13 +82,15 @@ const SelectedWorks = ({ data }) => {
                     ) : null}
 
                     <div className="c-selected-work__button slider__btn absolute top-36 h-auto ">
-                      <a className="c-btn btn--big btn--high-contrast">View Case</a>
+                      <Link href={`/archive?id=${selectedWork.id}`} className="c-btn btn--big btn--high-contrast">
+                        View Case
+                      </Link>
                     </div>
                   </div>
 
                   <div className="slider__context absolute lg:relative top-0 w-full lg:w-2/6 h-96 md:h-full flex items-center flex-wrap  content-center pl-8 z-50">
                     <h4 className="text-black text-5xl bg-white">{selectedWork.projectTitle}</h4>
-                    <p className="text-black mt-4 bg-white w-4/5 lg:w-full">{selectedWork.description}</p>
+                    <p className="c-slider__p text-black mt-4 bg-white w-4/5 lg:w-full">{selectedWork.description}</p>
 
                     <SwiperNavs className="hidden lg:flex flex-wrap" />
                   </div>

@@ -20,7 +20,6 @@ const LastestProjects = ({ data }) => {
                 index < 3 ? "" : "hidden"
               }`}
             >
-              {console.log("oriject id", project)}
               <div className="absolute top-3 left-3 flex gap-2 w-11/12 z-40">
                 {project.category.map((cat, index) => (
                   <div key={`className-${index}`} className="bg-gray-200 px-6 py-1 mr-2 text-black">
@@ -41,7 +40,7 @@ const LastestProjects = ({ data }) => {
                 className="w-11/12 haji absolute bottom-0 bg-primary py-5 px-3 z-50"
                 style={{ left: "50%", transform: "translate(-50% , 50%)" }}
               >
-                <p className="m-0 text-white text-xl text-center">{project.description}</p>
+                <p className="m-0 text-white text-xl text-center">{project.projectTitle}</p>
               </div>
             </Link>
           ))}

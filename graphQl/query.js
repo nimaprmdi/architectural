@@ -7,7 +7,7 @@ const Home_DATA = gql`
         projectTitle
         description
         id
-        projectsGallery {
+        projectsGallery(first: 30) {
           mimeType
           url(transformation: { document: {} })
         }
@@ -41,7 +41,7 @@ const POJECTS_SLIDERS = gql`
       id
       category
       projectTitle
-      projectsGallery {
+      projectsGallery(first: 30) {
         url(transformation: { document: {} })
         handle
         mimeType
@@ -72,7 +72,7 @@ const PROJECT = gql`
       isSlider
       projectSlug
       projectTitle
-      projectsGallery {
+      projectsGallery(first: 30) {
         url(transformation: { document: {} })
         handle
         mimeType
@@ -101,4 +101,13 @@ const FOOTER = gql`
   }
 `;
 
-export { Home_DATA, POJECTS_SLIDERS, PROJECT, CATS, FOOTER };
+const HEADER = gql`
+  query getHeader {
+    abouts {
+      title
+      aboutSocials
+    }
+  }
+`;
+
+export { Home_DATA, POJECTS_SLIDERS, PROJECT, CATS, FOOTER, HEADER };
